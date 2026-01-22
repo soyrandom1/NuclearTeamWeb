@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sprite-animation {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 100%;
+  max-width: 500px; /* Increased to 500px */
+  height: auto;
+  aspect-ratio: 1/1;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.w-full.bg-purple-900\/30 {
+  margin-top: 0.5rem;
+}
+
+@keyframes breath {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.hover\:animate-breath:hover {
+  animation: breath 4s ease-in-out infinite;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #6a0dad;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.instagram-link,
+.tiktok-link {
+  color: #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.instagram-link:hover {
+  color: #E1306C;
+  transform: scale(1.1);
+}
+
+.tiktok-link:hover {
+  color: #25F4EE;
+  transform: scale(1.1);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bevel-effect {
+  color: #ffffff;
+  text-shadow: 
+    1px 1px 0 #000,
+    2px 2px 0 #222,
+    -1px -1px 0 hsl(0, 0%, 87%);
+}
